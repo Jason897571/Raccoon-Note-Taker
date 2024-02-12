@@ -4,22 +4,25 @@ const path = require('path');
 const dbPath = path.join(__dirname, '../db/db.json');
 const { v4: uuidv4 } = require('uuid');
 
-
+// read database
 const readDbFile = ()=>{
     data = fs.readFileSync(dbPath)
     return JSON.parse(data)
 }
 
+// save database
 const writeDbFile = (data)=>{
     fs.writeFileSync(dbPath, JSON.stringify(data));
 }
 
-
+// get info from database
 notes.get('/', (req, res) => {
     const db = readDbFile();
     res.status(200).json(db)
 });
 
+
+// post, receive info from user and save in the db
 notes.post('/', (req, res) => {
     let {title, text} = req.body
     if (title && text){
@@ -35,6 +38,7 @@ notes.post('/', (req, res) => {
 
 })
 
+// delete notes based on users' delete request
 notes.delete('/:id', (req, res) => {
     const idToDelete = req.params.id;
     db = readDbFile();

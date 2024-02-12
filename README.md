@@ -14,7 +14,7 @@
     <a href="https://github.com/Jason897571/Raccoon-Note-Taker"><strong>Click here for Github Repo  »</strong></a>
     <br />
     <br />
-    <a href="https://drive.google.com/file/d/1aSJL-9GIMs000kB5T1pPjPUjF1kse6AI/view?usp=sharing">Deployed Website</a>
+    <a href="">Deployed Website</a>
     ·
     <a href="https://github.com/Jason897571/Raccoon-Note-Taker/issues">Report Bug</a>
     ·
